@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=JetBrains+Mono:wght@200&display=swap');
+
+.charsheet span{
+    font-family: 'JetBrains Mono', monospace;
+}

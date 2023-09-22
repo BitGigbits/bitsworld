@@ -1,0 +1,135 @@
+<td><div style="float: left">
+    <table border="0">
+        <tbody>
+            <tr><td rowspan=4> &nbsp; &nbsp; &nbsp; &nbsp; </td></tr>
+            <tr>
+                <td colspan=6>
+                    <table>
+                        <tr>
+                            <td ><div style="float: left"><input type="text" name="attr_character_name" title="character_name" style="width: 300px;"> <br>Nome do Personagem</div></td>
+                            <td ><div style="float: left"><input type="text" name="attr_playername" title="playername" style="width: 160px;"><br>Nome do Jogador</div></td>
+                        </tr>
+                        <tr>
+                            <td ><div style="float: left"><input type="text" name="attr_expcurrent" title="expcurrent" style="width: 145px; text-align: right;">/<input type="text" name="attr_expgoal" title="expgoal" style="width: 150px;"><br>Pontos de Experiência</div></td>
+                            <td ><div style="float: left"><input type="text" name="attr_homeland" title="homeland" style="width: 160px;"><br>Origem</div> </td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan=2><div style="float: left"><img src="https://i.imgur.com/GuHcZ1t.png" style="float: left; width: 330px;"></img> &nbsp; 1.0</div></td>    
+             </tr>
+            <tr>
+                <td><div style="float: left"><input type="text" name="attr_race" title="race" style="width: 130px;"> <br>Raça</div></td>
+                <td colspan="2"><div style="float: left"><input type="text" name="attr_racetype" title="racetype" style="width: 130px;"> <br>Tipo</div></td>
+                <td><div style="float: left"><select style="width: 90px;" name="attr_size" title="size">
+                        <option value="-8">Colossal</option>
+                        <option value="-4">Imenso</option>
+                        <option value="-2">Enorme</option>
+                        <option value="-1">Grande</option>
+                        <option value="0" selected>Medio</option>
+                        <option value="1">Pequeno</option>
+                        <option value="2">Miúdo</option>
+                        <option value="4">Mínimo</option>
+                        <option value="8">Minúsculo</option>
+                    </select><br>Tamanho</div></td>
+                <td><div style="float: left"><input type="text" name="attr_gender" title="gender" style="width: 70px;"> <br>Sexo</div></td>
+                <td><div style="float: left"><input type="text" name="attr_alignment" title="alignment" style="width: 70px;"> <br>Alinhamento</div></td>
+                <td colspan="2"><div style="float: left"><input type="text" name="attr_deity" title="deity" style="width: 220px;"> <br>Divindade</div></td>
+            </tr>
+            <tr>
+                <td><div style="float: left"><input type="text" name="attr_class" title="class" style="width: 130px;"> <br>Classe</div></td>
+                <td><div style="float: left"><input type="text" name="attr_level" title="level" style="width: 85px;"> <br>Nível</div></td>
+                <td><div style="float: left"><input type="text" name="attr_hitdie" title="hitdie" style="width: 43px;"> <br>DV</div></td>
+                <td><div style="float: left"><input type="text" name="attr_age" title="age" style="width: 90px;"> <br>Idade</div></td>
+                <td><div style="float: left"><input type="text" name="attr_height" title="height" style="width: 70px;"> <br>Altura</div> </td>
+                <td><div style="float: left"><input type="text" name="attr_weight" title="weight" style="width: 70px;"> <br>Peso</div></td>
+                <td><div style="float: left"><input type="text" name="attr_eyes" title="eyes" style="width: 95px;"> <br>Olhos</div></td>
+                <td><div style="float: left"><input type="text" name="attr_hair" title="hair" style="width: 120px;"> <br>Cabelo</div></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <!--div style="overflow:hidden;display:table;width:100%;"-->
+            <div style="display:table;width:39%;float:left;">
+                <span class="sheet-table-name">Atributos</span>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-header">Habilidade</span>
+                    <span class="sheet-table-header">Total</span>
+                    <span class="sheet-table-header">Mod</span>
+                    <span class="sheet-table-header">Base</span>
+                    <span class="sheet-table-header">Outros</span>
+                    <span class="sheet-table-header">Bonus</span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">FOR</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_str" value="(@{str-base} + @{str-misc} + @{str-Bonus})" title="str" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_str-mod" value="(floor((@{str}) / 2) - 5)" title="str-mod" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-base" value="10" title="str-base"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-misc" value="0" title="str-misc"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_str-Bonus" value="0" title="str-Bonus"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_strcheck" title='strcheck' value="/em - @{character_name} obteve [[1d20 + @{str-mod}]] no teste do atributo força."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">VIT</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_vit" value="(@{vit-base} + @{vit-misc} + @{vit-Bonus})" title="vit" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_vit-mod" value="(floor((@{vit}) / 2) - 5)" title="vit-mod" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_vit-base" value="10" title="vit-base"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_vit-misc" value="0" title="vit-misc"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_vit-Bonus" value="0" title="vit-Bonus"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_vitcheck" title='vitcheck' value="/em - @{character_name} obteve [[1d20 + @{vit-mod}]] no teste do atributo vitalidade."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">AGI</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_vit" value="(@{vit-base} + @{vit-misc} + @{vit-Bonus})" title="vit" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_vit-mod" value="(floor((@{vit}) / 2) - 5)" title="vit-mod" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_vit-base" value="10" title="vit-base"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_vit-misc" value="0" title="vit-misc"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_vit-Bonus" value="0" title="vit-Bonus"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_vitcheck" title='vitcheck' value="/em - @{character_name} obteve [[1d20 + @{vit-mod}]] no teste do atributo vitalidade."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">DES</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_dex" title="dex" value="(@{dex-base} + @{dex-misc} + @{dex-Bonus})" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_dex-mod" title="dex-mod" value="(floor((@{dex}) / 2) - 5)" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-base" title="dex-base" value="10"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-misc" title="dex-misc" value="0"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_dex-Bonus" title="dex-Bonus" value="0"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_dexcheck" title='dexcheck' value="/em - @{character_name} obteve [[1d20 + @{dex-mod}]] no teste do atributo destreza."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">INT</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_int" title="int" value="(@{int-base} + @{int-misc} + @{int-Bonus})" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_int-mod" title="int-mod" value="(floor((@{int}) / 2) - 5)" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_int-base" title="int-base" value="10"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_int-misc" title="int-misc" value="0"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_int-Bonus" title="int-Bonus" value="0"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_intcheck" title='intcheck' value="/em - @{character_name} obteve [[1d20 + @{int-mod}]] no teste do atributo inteligência."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">MEN</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_wis" title="wis" value="(@{wis-base} + @{wis-misc} + @{wis-Bonus})" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_wis-mod" title="wis-mod" value="(floor((@{wis}) / 2) - 5)" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_wis-base" title="wis-base" value="10"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_wis-misc" title="wis-misc" value="0"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_wis-Bonus" title="wis-Bonus" value="0"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_wischeck" title='wischeck' value="/em - @{character_name} obteve [[1d20 + @{wis-mod}]] no teste do atributo sabedoria."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">SOR</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_cha" title="cha" value="(@{cha-base} + @{cha-misc} + @{cha-Bonus})" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_cha-mod" title="cha-mod" value="(floor((@{cha}) / 2) - 5)" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_cha-base" title="cha-base" value="10"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_cha-misc" title="cha-misc" value="0"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_cha-Bonus" title="cha-Bonus" value="0"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_chacheck" title='chacheck' value="/em - @{character_name} obteve [[1d20 + @{cha-mod}]] no teste do atributo carisma."/></span>
+                </div>
+                <div class="sheet-table-row">
+                    <span class="sheet-table-row-name">CON</span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_con" title="con" value="(@{con-base} + @{con-misc} + @{con-Bonus})" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width:45px;" name="attr_con-mod" title="con-mod" value="(floor((@{con}) / 2) - 5)" disabled="true"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_con-base" title="con-base" value="10"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_con-misc" title="con-misc" value="0"></span>
+                    <span class="sheet-table-data-center"><input type="text" style="width: 45px;" name="attr_con-Bonus" title="con-Bonus" value="0"></span>
+                    <span class="sheet-table-data-center"><button type="roll" name="attr_concheck" title='concheck' value="/em - @{character_name} obteve [[1d20 + @{con-mod}]] no teste do atributo constituição."/></span>
+                </div>
+            </div>
+            </td>
